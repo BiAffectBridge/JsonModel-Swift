@@ -99,7 +99,7 @@ open class ArchiveMetadata: Codable, DocumentableRootObject {
     // DocumentableObject implementation
     
     open var jsonSchema: URL {
-        URL(string: "\(type(of: self)).json", relativeTo: kSageJsonSchemaBaseURL)!
+        URL(string: "\(type(of: self)).json", relativeTo: kBaseJsonSchemaURL)!
     }
     
     open var documentDescription: String? {

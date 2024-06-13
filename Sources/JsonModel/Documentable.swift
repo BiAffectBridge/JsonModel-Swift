@@ -8,6 +8,9 @@ import Foundation
 /// Hardcoded URL to the repo that hosts the json schemas for the mobile client shared libraries.
 public let kSageJsonSchemaBaseURL = URL(string: "https://sage-bionetworks.github.io/mobile-client-json/schemas/v2/")!
 
+/// Hardcoded URL to the BiAffectBrige endpoint for shared schemas.
+public let kBaseJsonSchemaURL = URL(string: "https://biaffectbridge.github.io/mobile-client-json/schemas/v4/")!
+
 public protocol TypeRepresentable : Hashable, RawRepresentable, ExpressibleByStringLiteral {
     var stringValue: String { get }
 }

@@ -63,7 +63,7 @@ final class DocumentableTests: XCTestCase {
             if let interface = schema.root.allOf?.first?.refId {
                 XCTAssertEqual("ResultData", interface.className)
                 XCTAssertTrue(interface.isExternal)
-                XCTAssertEqual("https://sage-bionetworks.github.io/mobile-client-json/schemas/v2/ResultData.json", interface.classPath)
+                XCTAssertEqual("https://biaffectbridge.github.io/mobile-client-json/schemas/v4/ResultData.json", interface.classPath)
             }
             else {
                 XCTFail("Failed to add expected interfaces.")
@@ -115,7 +115,7 @@ struct TestResult : SerializableResultData, DocumentableStruct, DocumentableRoot
     }
     
     public var jsonSchema: URL {
-        URL(string: "\(self.className).json", relativeTo: kSageJsonSchemaBaseURL)!
+        URL(string: "\(self.className).json", relativeTo: kBaseJsonSchemaURL)!
     }
 
     public var documentDescription: String? {
